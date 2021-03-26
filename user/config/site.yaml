@@ -22,7 +22,7 @@ routes:
   '/new/*': '/blog/*'
 blog:
   route: /blog
-logo: oologo.png
+logo: BBLogo.png
 header:
   title: 'Backcountry Basics'
   description: 'Helping Others Heed the Call of the Wild'
