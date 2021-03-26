@@ -1,0 +1,22 @@
+state: enabled
+email: matkatnathan@icloud.com
+fullname: 'Nathan Thompson'
+title: Administrator
+access:
+  site:
+    login: true
+  admin:
+    login: true
+    super: true
+hashed_password: $2y$10$8mbNm606NEvWVM9OFxlIxOH3Bo/Kf00UHk9uki9eKXX4JXgERxEEy
+password: null
+language: en
+content_editor: default
+twofa_enabled: false
+twofa_secret: LA2H7BDRSZYNJYO4J3JR4WBOGZUEPH6G
+avatar:
+  user/accounts/avatars/kXa4zx5W80iUceP.jpeg:
+    name: kXa4zx5W80iUceP.jpeg
+    type: image/jpeg
+    size: 1771807
+    path: user/accounts/avatars/kXa4zx5W80iUceP.jpeg

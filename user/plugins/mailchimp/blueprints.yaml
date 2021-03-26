@@ -1,0 +1,68 @@
+name: MailChimp
+version: 0.2.1
+description: Add MailChimp subscribe form action support
+icon: plug
+author:
+  name: Aaron Hipple
+  email: aaron@hippl.es
+homepage: https://github.com/aaronhipple/grav-plugin-mailchimp
+keywords: grav, plugin, mailchimp
+bugs: https://github.com/aaronhipple/grav-plugin-mailchimp/issues
+docs: https://github.com/aaronhipple/grav-plugin-mailchimp/blob/master/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: MAILCHIMP_SETTINGS.ENABLED.LABEL
+      highlight: 1
+      default: 0
+      options:
+        1: MAILCHIMP_SETTINGS.ENABLED.OPTIONS.1
+        0: MAILCHIMP_SETTINGS.ENABLED.OPTIONS.0
+      validate:
+        type: bool
+    api_key:
+      type: password
+      label: MAILCHIMP_SETTINGS.API_KEY.LABEL
+      help: MAILCHIMP_SETTINGS.API_KEY.HELP
+    language_detection_mode:
+      type: toggle
+      label: MAILCHIMP_SETTINGS.LANGUAGE_DETECTION_MODE.LABEL
+      help: MAILCHIMP_SETTINGS.LANGUAGE_DETECTION_MODE.HELP
+      default: browser
+      options:
+        browser: Browser
+        active: Active
+    default_language:
+      type: select
+      size: long
+      label: MAILCHIMP_SETTINGS.DEFAULT_LANGUAGE.LABEL
+      help: MAILCHIMP_SETTINGS.DEFAULT_LANGUAGE.HELP
+      default: "en"
+      data-options@: '\Grav\Plugin\MailChimpPlugin::supportedLanguages'
+    default_status:
+      type: toggle
+      label: MAILCHIMP_SETTINGS.DEFAULT_STATUS.LABEL
+      help: MAILCHIMP_SETTINGS.DEFAULT_STATUS.HELP
+      default: subscribed
+      options:
+        subscribed: MAILCHIMP_SETTINGS.DEFAULT_STATUS.OPTIONS.SUBSCRIBED
+        pending: MAILCHIMP_SETTINGS.DEFAULT_STATUS.OPTIONS.PENDING
+    default_list_id:
+      type: text
+      label: MAILCHIMP_SETTINGS.DEFAULT_LIST_ID.LABEL
+      help: MAILCHIMP_SETTINGS.DEFAULT_LIST_ID.HELP
+    delete_first:
+      type: toggle
+      label: MAILCHIMP_SETTINGS.DELETE_FIRST.LABEL
+      help: MAILCHIMP_SETTINGS.DELETE_FIRST.HELP
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool

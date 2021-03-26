@@ -1,0 +1,7 @@
+enabled: false
+api_key: null
+language_detection_mode: browser
+default_language: en
+default_status: subscribed
+default_list_id: null
+delete_first: false

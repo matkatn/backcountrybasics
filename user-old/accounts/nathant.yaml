@@ -1,0 +1,11 @@
+state: enabled
+email: matkatnathan@icloud.com
+fullname: 'Nathan Thompson'
+title: Administrator
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$8mbNm606NEvWVM9OFxlIxOH3Bo/Kf00UHk9uki9eKXX4JXgERxEEy

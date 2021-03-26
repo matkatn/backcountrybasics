@@ -1,0 +1,98 @@
+version: 2.1
+
+executors:
+  tester:
+    docker:
+      - image: circleci/php:7.2
+  builder:
+    docker:
+      - image: circleci/php:7.2
+    working_directory: /tmp/mailchimp
+  releaser:
+    docker:
+      - image: circleci/golang:1.12
+    working_directory: /tmp/mailchimp
+
+jobs:
+  test:
+    executor: tester
+    steps:
+      - checkout
+      - run: sudo apt update -y
+      - run: sudo apt install -y libpng-dev
+      - run: sudo docker-php-ext-install gd
+      - run: sudo composer self-update
+      - restore_cache:
+          keys:
+            - composer-dev-{{ .Branch }}-{{ checksum "composer.lock" }}
+      - run: composer install -n
+      - save_cache:
+          key: composer-dev-{{ .Branch }}-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+      - run: composer lint
+      - run:
+          command: |
+            mkdir -p build/{test-results,coverage}
+      - run: vendor/bin/phpunit --coverage-html build/coverage --log-junit build/test-results/junit.xml
+      - store_test_results:
+          path: build/test-results
+      - store_artifacts:
+          path: build/coverage
+
+  build_tags:
+    executor: builder
+    steps:
+      - checkout
+      - run: sudo composer self-update
+      - restore_cache:
+          keys:
+            - composer-{{ .Branch }}-{{ checksum "composer.lock" }}
+            - composer-{{ .Branch }}-
+      - run: composer install -n --no-dev --prefer-dist
+      - save_cache:
+          key: composer-{{ .Branch }}-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+      - run: |
+          [ -d /tmp/archives ] || mkdir -p /tmp/archives
+          VERSION="$(git tag -l --points-at HEAD | head -n 1)"
+          (cd /tmp && tar --exclude-vcs --exclude='.circleci' -cvzf "/tmp/archives/grav-plugin-mailchimp-${VERSION}.tar.gz" ./mailchimp)
+          (cd /tmp && zip -r "/tmp/archives/grav-plugin-mailchimp-${VERSION}.zip" ./mailchimp/*)
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - archives
+
+  release_tags:
+    executor: releaser
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/workspace
+      - run: |
+          go get github.com/tcnksm/ghr
+          VERSION=$(git tag -l --points-at HEAD | head -n 1)
+          ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete -draft ${VERSION} /tmp/workspace/archives/
+
+workflows:
+  version: 2
+
+  tests:
+    jobs:
+      - test
+
+  build_and_release:
+    jobs:
+      - build_tags:
+          filters:
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+      - release_tags:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+          requires:
+            - build_tags
