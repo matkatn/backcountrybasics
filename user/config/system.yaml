@@ -28,7 +28,7 @@ languages:
   pages_fallback_only: false
 home:
   alias: /home
-  hide_in_urls: false
+  hide_in_urls: true
 pages:
   type: regular
   theme: gateway

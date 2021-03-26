@@ -1,12 +1,16 @@
 ---
 title: 'Camping Basics'
-date: '20:42 01/29/2021'
+date: '01/29/2021 08:42 pm'
 author: 'Nathan T'
 body_classes: 'single single-post postid-15 single-format-standard group-blog'
 taxonomy:
+    category:
+        - Featured
     tag:
         - Basics
         - Camping
+    featured:
+        - '1'
 media_order: 'Camping 2.jpeg'
 published: true
 visible: false

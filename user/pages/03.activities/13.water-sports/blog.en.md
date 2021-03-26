@@ -15,6 +15,7 @@ feed:
     description: 'Sample Blog Description'
     limit: 10
 pagination: true
+published: false
 ---
 
 From rafting to kayaking, spending time on the water allows for wild rides and mellow floats in the same day!

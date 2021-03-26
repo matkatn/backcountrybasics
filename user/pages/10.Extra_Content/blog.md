@@ -1,5 +1,5 @@
 ---
-title: 'Backcountry Musings'
+title: 'Mountain Musings'
 sitemap:
     changefreq: monthly
     priority: 1.03
