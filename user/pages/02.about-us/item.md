@@ -1,9 +1,9 @@
 ---
 title: 'About Us'
-media_order: 'IMG_1082 (1).jpeg'
+media_order: 1D566BEB-3745-4E78-A04C-468E53DAFA43_1_105_c.jpg
+content:
+    items: '@self.modular'
 ---
-
-![IMG_1082%20%281%29](IMG_1082%20%281%29.jpeg "IMG_1082%20%281%29")
 
 It is a cool winter morning in the wooded mountains. Small birds are chirping in the snow-clad pines. Occasionally a lump of snow falls and creates a satisfying thump, some of the only movement to be seen for miles.
 

@@ -9,7 +9,8 @@ taxonomies:
   - tag
   - featured
 metadata:
-  description: 'My cool Site'
+  description: 'A blog focused on helping others spend more time in the great outdoors'
+  Keywords: 'Blog, outdoors, recreation, hiking, camping'
 summary:
   enabled: true
   format: short
@@ -27,11 +28,6 @@ header:
   title: 'Backcountry Basics'
   description: 'Helping Others Heed the Call of the Wild'
   background: forest.jpg
-  # buttons:
-  #   -
-  #     text: 'Explore!'
-  #     url: '#'
-  #     class: 'button radius'
 social:
   -
     url: 'https://twitter.com/getgrav'

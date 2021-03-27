@@ -12,8 +12,6 @@ taxonomy:
 media_order: camp-fire-1114088_1920.jpg
 ---
 
-![camp-fire-1114088_1920](camp-fire-1114088_1920.jpg "camp-fire-1114088_1920")
-
 *This is targeted for people who live in places where it will actually gets cold and snow during the winter months.
 
 Let's be honest, winter isn't everyone's favorite season. It's usually cold, cloudy, and quite frankly a little depressing at times. At least for me, I quite enjoy sticking to the climate controlled safety of my house during most of the winter.  That being said, there is something about getting out when the world looks like a winter wonderland. Even though it may be bitter cold, something draws me outside to enjoy the fresh, freezing air. One thing which I enjoy doing when this happens is camping.

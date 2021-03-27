@@ -1,6 +1,6 @@
 ---
 title: 'Hiking Basics'
-author: Nathan
+author: Nathan T
 body_classes: 'single single-post postid-15 single-format-standard group-blog'
 taxonomy:
     category:
@@ -12,7 +12,7 @@ taxonomy:
     featured:
         - '1'
 published: true
-media_order: IMG_0030.jpeg
+media_order: 9EFA2095-B8D5-4724-A6F5-D56CF86D9B76_1_105_c.jpg
 ---
 
 "Oh, the places you'll go!" (Dr. Seuss)

@@ -6,6 +6,7 @@ body_classes: 'single single-post postid-15 single-format-standard group-blog'
 taxonomy:
     category:
         - Skiing
+media_order: IMG_0170.jpeg
 ---
 
 While the exhilarating adrenaline rush of sending it down a steep slope is exciting and breath-taking, I'd like to give a shout-out to the lesser known brother of  downhill (also known as Alpine) skiing: Nordic Skiing. 

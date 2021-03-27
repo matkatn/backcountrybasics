@@ -1,5 +1,7 @@
 ---
 title: 'Adventure Post One'
+date:   02/23/2021
+author: 'Nathan T'
 body_classes: 'single single-post postid-15 single-format-standard group-adventure-posts'
 taxonomy:
     category:

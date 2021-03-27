@@ -1,7 +1,7 @@
 ---
 title: Fire
-date: '20:48 01/29/2021'
-author: 'Rescue Themes'
+date: '01/29/2021 08:48 pm'
+author: 'Nathan T'
 body_classes: 'single single-post postid-15 single-format-standard group-blog'
 taxonomy:
     category:

@@ -6,8 +6,8 @@
 # class: home-content
 buttons:
     -
-        text: 'Sign up for weekly announcements'
-        url: 'http://localhost:8888/grav-admin/pages/contact'
+        text: 'Sign up for weekly emails'
+        url: 'http://backcountrybasics.org/en/pages/contact'
         class: 'button radius'
     -
         # text: 'Insta'

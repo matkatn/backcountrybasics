@@ -1,7 +1,7 @@
 ---
 title: Re-creation
 date: '13:34 01/24/2021'
-author: 'Nathan Thompson'
+author: 'Nathan T'
 body_classes: 'single single-post postid-15 single-format-standard group-blog'
 taxonomy:
     category:
