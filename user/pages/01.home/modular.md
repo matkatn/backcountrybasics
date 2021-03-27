@@ -18,4 +18,4 @@ media_order: IMG_8406.jpeg
 ---
 
 ## Featured Posts
-### This is where all the cool stuff is!
+### Here are a few posts to help get you started!
