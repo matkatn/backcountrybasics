@@ -1,5 +1,5 @@
 ---
-  deployment:
-    tasks:
-      - export DEPLOYPATH=/home3/thompsz9/public_html/backcountrybasics/
-      - /bin/cp -R user $DEPLOYPATH
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home3/thompsz9/public_html/backcountrybasics/
+    - /bin/cp -R user $DEPLOYPATH
