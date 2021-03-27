@@ -50,23 +50,23 @@ form:
           type: hidden
           evaluateDefault: grav.uri.path
 
-#        - name: g-recaptcha-response
-#          label: Captcha
-#          type: captcha
-#          recaptcha_site_key: e32iojeoi32jeoi32jeoij32oiej32oiej3
-#          recaptcha_not_validated: 'Captcha not valid!'
-#          validate:
-#            required: true
-#          process:
-#            ignore: true
+       - name: g-recaptcha-response
+         label: Captcha
+         type: captcha
+         recaptcha_: e32iojeoi32jeoi32jeoij32oiej32oiej3
+         recaptcha_not_validated: 'Captcha not valid!'
+         validate:
+           required: true
+         process:
+           ignore: true
 
     buttons:
         - type: submit
           value: PLUGIN_COMMENTS.SUBMIT_COMMENT_BUTTON_TEXT
 
     process:
-#        - captcha:
-#            recaptcha_secret: ej32oiej23oiej32oijeoi32jeio32je
+       - captcha:
+           recaptcha_secret: ej32oiej23oiej32oijeoi32jeio32je
         - email:
             subject: PLUGIN_COMMENTS.EMAIL_NEW_COMMENT_SUBJECT
             body: "{% include 'forms/data.html.twig' %}"
