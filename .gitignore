@@ -1,3 +1,7 @@
 .DS_Store
 /cache/
-/logs
+logs/*
+composer.lock
+assets/*
+images/*
+user/data/*
